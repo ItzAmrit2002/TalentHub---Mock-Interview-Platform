@@ -1,48 +1,43 @@
 import { Meteors } from "@/ui-aceternity/Meteor/meteors";
 import Image from "next/image";
 import React from "react";
+import { Button, MovingBorder } from "@/ui-aceternity/Buttons/MovingBorder";
 
-const BoxCards = () => {
+const BoxCards = ({
+	title,
+	desc,
+	file,
+}: {
+	title: string;
+	desc: string;
+	file: string;
+}) => {
 	return (
-		<div className=" w-full max-w-[500px]">
-			{/* <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" /> */}
-			<div className="shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
-				{/* <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth="1.5"
-						stroke="currentColor"
-						className="h-2 w-2 text-gray-300">
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
-						/>
-					</svg>
-				</div> */}
-				<Image src="/student.gif" alt="student" fill />
-				<div>
-					<h1 className="font-bold text-xl text-white mb-4 relative z-50">
-						Meteors because they&apos;re cool
-					</h1>
+		<div className="shadow-xl bg-transparent border border-gray-800 px-4 pb-8 h-full overflow-hidden rounded-2xl text-center sm:w-[600px] z-0 relative my-auto w-[80%]">
+		
+			<Meteors number={50} />
+			<div className="relative w-[60%] h-[50%] mx-auto">
+				<Image src={file} alt="student" fill objectFit="contain" />
+			</div>
 
-					<p className="font-normal text-base text-slate-500 mb-4 relative z-50">
-						I don&apos;t know what to write so I&apos;ll just paste something
-						cool here. One more sentence because lorem ipsum is just
-						unacceptable. Won&apos;t ChatGPT the shit out of this.
-					</p>
+			<div className="flex flex-col justify-evenly items-center h-[50%]">
+				<h1 className="font-bold text-xl text-white mb-4 ">{title}</h1>
 
-					<button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
-						Explore
-					</button>
+				<p className="font-normal text-base text-slate-500 mb-4">{desc}</p>
+
+				{/* <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">
+					Explore
+				</button> */}
+				<div className="h-[70px] ">
+					<Button
+						borderRadius="1.75rem"
+						className="border px-4 py-1 border-gray-500 text-gray-300">
+						Get started
+					</Button>
 				</div>
-
-				{/* Meaty part - Meteor effect */}
-				<Meteors number={20} />
 			</div>
 		</div>
+		
 	);
 };
 

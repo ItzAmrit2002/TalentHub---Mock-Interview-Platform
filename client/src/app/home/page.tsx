@@ -10,6 +10,8 @@ const page = () => {
 			<Home1 />
 
 			<Home2 />
+
+			
 		</>
 	);
 };

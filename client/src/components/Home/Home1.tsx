@@ -15,7 +15,7 @@ const Home1 = () => {
 						background="transparent"
 						minSize={0.6}
 						maxSize={1.4}
-						particleDensity={80}
+						particleDensity={50}
 						className="w-full h-full"
 						particleColor="#FFFFFF"
 					/>
