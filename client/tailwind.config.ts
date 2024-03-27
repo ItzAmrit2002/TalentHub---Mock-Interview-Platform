@@ -2,6 +2,7 @@ const {
 	default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
+import { Lily_Script_One, Monofett } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -106,6 +107,14 @@ const config = {
 				spotlight: "spotlight 2s ease .75s 1 forwards",
 				"meteor-effect": "meteor 5s linear infinite",
    
+			},
+			fontFamily: {
+				sans: ["Inter", "sans-serif"],
+				serif: ["Merriweather", "serif"],
+				raleway : ["Raleway", "sans-serif"],
+				roboto : ["Roboto Condensed", "sans-serif"],
+				Lily_Script_One : ["Lily Script One", "cursive"],
+				Monofett : ["Monofett", "cursive"],
 			},
 		},
 	},
