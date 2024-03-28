@@ -13,8 +13,7 @@ const BoxCards = ({
 	file: string;
 }) => {
 	return (
-		<div className="shadow-xl bg-transparent border border-gray-800 px-4 pb-8 h-full overflow-hidden rounded-2xl text-center sm:w-[600px] z-0 relative my-auto w-[80%]">
-		
+		<div className="shadow-xl bg-black border border-gray-800 px-4 pb-8 h-full overflow-hidden rounded-2xl text-center sm:w-[600px] z-0 relative my-auto w-[80%]">
 			<Meteors number={50} />
 			<div className="relative w-[60%] h-[50%] mx-auto">
 				<Image src={file} alt="student" fill objectFit="contain" />
@@ -37,7 +36,6 @@ const BoxCards = ({
 				</div>
 			</div>
 		</div>
-		
 	);
 };
 
